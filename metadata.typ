@@ -1,12 +1,13 @@
-#let format_strane = "iso-b5"         // могуће вредности: iso-b5, a4
-#let naslov = "Шаблон и упутство за писање завршних радова"
-#let autor = "Уписати име и презиме"
+#let format_strane = "a4"         // могуће вредности: iso-b5, a4
+#let naslov = "Штатичка анализа Go кода у циљу читљивости и одржавања"
+#let autor = "Патрик Барши"
+
 
 // На енглеском
-#let naslov_eng = "Template and tutorial for thesis preparation"
-#let autor_eng = "Upisati ime i prezime na latinici"
+#let naslov_eng = "Static Go code analysis for readability and maintainability"
+#let autor_eng = "Patrik Barši"
 
-#let indeks = "Уписати индекс"
+#let indeks = "SV7/2022"
 
 // Име и презиме ментора
 #let mentor = "Игор Дејановић"
@@ -15,24 +16,44 @@
 
 // Скинути коментаре са одговарајућих линија
 #let studijski_program = "Софтверско инжењерство и информационе технологије"
-//#let studijski_program = "Рачунарство и аутоматика"
-#let stepen = "Мастер академске студије"
-//#let stepen = "Основне академске студије"
+// #let studijski_program = "Рачунарство и аутоматика"
+// #let stepen = "Мастер академске студије"
+#let stepen = "Основне академске студије"
 
 #let godina = [#datetime.today().year()]
 
-#let kljucne_reci = "Шаблон, завршни рад, упутство"
+#let kljucne_reci = "статичка анализа, линтер, Go, Rust, Tree-sitter, конкретно стабло синтаксе, дијагностике"
 #let apstrakt = [
-     Овај документ представља упутство за писање завршних радова на Факултету
-     техничких наука Универзитета у Новом Саду. У исто време је и шаблон за Typst.
+     У овом раду представљени су дизајн и имплементација алата за статичку
+     анализу изворног кода написаног у програмском језику Go. Алат је
+     имплементиран у програмском језику Rust и користи Tree-sitter као
+     позадински систем за парсирање, чиме се добија конкретно стабло синтаксе
+     анализираног кода. За разлику од анализатора интегрисаних у компајлер,
+     овај приступ одржава алат независним од Go инфраструктуре. Имплементирано
+     је 21 правило статичке анализе подељено у две категорије: општа правила
+     која детектују честе програмерске грешке и правила изведена из књиге
+     _100 Go Mistakes and How to Avoid Them_ аутора Теиве Харсањија. Свако
+     правило независно обрађује стабло синтаксе и производи дијагностике са
+     прецизним информацијама о позицији у изворном коду. Алат је доступан као
+     самостална апликација командне линије способна да анализира појединачне
+     фајлове или целе директоријуме.
 ]
 
 // На енглеском
-#let kljucne_reci_eng = "Template, thesis, tutorial"
+#let kljucne_reci_eng = "static analysis, linter, Go, Rust, Tree-sitter, concrete syntax tree, diagnostics"
 #let apstrakt_eng = [
-     This document provides guidelines for writing final theses at the Faculty
-     of Technical Sciences, University of Novi Sad. At the same time, it serves
-     as a Typst template.
+     This thesis presents the design and implementation of a static analysis
+     tool for source code written in the Go programming language. The tool is
+     implemented in Rust and uses Tree-sitter as its parsing backend to produce
+     a Concrete Syntax Tree of the analyzed code. Unlike compiler-integrated
+     analyzers, this approach keeps the tool decoupled from the Go toolchain.
+     The implementation covers 21 linting rules divided into two categories:
+     general rules targeting common programming mistakes, and rules derived from
+     the book _100 Go Mistakes and How to Avoid Them_ by Teiva Harsanyi. Each
+     rule operates independently on the syntax tree and emits diagnostics with
+     precise source locations. The tool is provided as a standalone
+     command-line application capable of analyzing individual Go source files
+     or entire directory trees.
 ]
 
 // TODO: Текст задатка добијате од ментора. Заменити доле #lorem(100) са текстом задатка.
