@@ -83,7 +83,7 @@
         #outline(title: none, target: figure.where(kind: image))
     ]
 
-    if query(figure.where(kind: image)).len() > 0  [
+    if query(figure.where(kind: raw)).len() > 0  [
         = Списак листинга
         <spisak-listinga>
         #outline(title: none, target: figure.where(kind: raw))
