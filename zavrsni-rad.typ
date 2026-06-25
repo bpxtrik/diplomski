@@ -72,6 +72,7 @@
 #include "poglavlja/3-tehnologije.typ"
 #include "poglavlja/4-arhitektura.typ"
 #include "poglavlja/5-implementacija.typ"
+#include "poglavlja/6-evaluacija.typ"
 #include "poglavlja/7-zakljucak.typ"
 
 
