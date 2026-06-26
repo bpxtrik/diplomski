@@ -121,7 +121,6 @@
 #show "Available at:": "Доступно на "
 #bibliography(title: [Литература], "literatura.bib")
 #checkbib()
-
 // Потребне исправке и дораде. У тексту користити са
 // #todo[Коментар шта треба урадити]
 // Функција todo се налази у модулу funkcije.typ
