@@ -25,35 +25,24 @@
 #let kljucne_reci = "статичка анализа, линтер, Go, Rust, Tree-sitter, конкретно стабло синтаксе, дијагностике"
 #let apstrakt = [
      У овом раду представљени су дизајн и имплементација алата за статичку
-     анализу изворног кода написаног у програмском језику Go. Алат је
-     имплементиран у програмском језику Rust и користи Tree-sitter као
-     позадински систем за парсирање, чиме се добија конкретно стабло синтаксе
-     анализираног кода. За разлику од анализатора интегрисаних у компајлер,
-     овај приступ одржава алат независним од Go инфраструктуре. Имплементирано
-     је 21 правило статичке анализе подељено у две категорије: општа правила
-     која детектују честе програмерске грешке и правила изведена из књиге
-     _100 Go Mistakes and How to Avoid Them_ аутора Теиве Харсањија. Свако
-     правило независно обрађује стабло синтаксе и производи дијагностике са
-     прецизним информацијама о позицији у изворном коду. Алат је доступан као
-     самостална апликација командне линије способна да анализира појединачне
-     фајлове или целе директоријуме.
+     анализу Go кода имплементираног у програмском језику Rust. Алат користи
+     Tree-sitter за парсирање и ради над конкретним стаблом синтаксе, чиме
+     остаје независан од Go инфраструктуре. Имплементирано је 21 правило
+     подељено у општа правила добре праксе и правила изведена из књиге
+     _100 Go Mistakes and How to Avoid Them_. Алат је доступан као апликација
+     командне линије способна да анализира фајлове или целе директоријуме.
 ]
 
 // На енглеском
 #let kljucne_reci_eng = "static analysis, linter, Go, Rust, Tree-sitter, concrete syntax tree, diagnostics"
 #let apstrakt_eng = [
      This thesis presents the design and implementation of a static analysis
-     tool for source code written in the Go programming language. The tool is
-     implemented in Rust and uses Tree-sitter as its parsing backend to produce
-     a Concrete Syntax Tree of the analyzed code. Unlike compiler-integrated
-     analyzers, this approach keeps the tool decoupled from the Go toolchain.
-     The implementation covers 21 linting rules divided into two categories:
-     general rules targeting common programming mistakes, and rules derived from
-     the book _100 Go Mistakes and How to Avoid Them_ by Teiva Harsanyi. Each
-     rule operates independently on the syntax tree and emits diagnostics with
-     precise source locations. The tool is provided as a standalone
-     command-line application capable of analyzing individual Go source files
-     or entire directory trees.
+     tool for Go source code written in Rust. The tool uses Tree-sitter to
+     produce a Concrete Syntax Tree, keeping it decoupled from the Go toolchain.
+     Twenty-one linting rules are implemented, divided into general best-practice
+     rules and rules derived from _100 Go Mistakes and How to Avoid Them_. The
+     tool is provided as a command-line application capable of analyzing
+     individual files or entire directory trees.
 ]
 
 // TODO: Текст задатка добијате од ментора. Заменити доле #lorem(100) са текстом задатка.
